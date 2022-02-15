@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Image from 'next/image';
+import Link from 'next/link';
 // import Script from 'next/script';
 import styles from '../styles/Home.module.css';
 
@@ -16,10 +17,10 @@ export default function Home() {
 
       <nav className={styles['main-nav']}>
         <ul>
-          <li>Home</li>
-          <li>About</li>
-          <li>Blog</li>
-          <li>Contact</li>
+          <Link href='/'><li className={styles.link} >Home</li></Link>
+          <Link href='/about'><li className={styles.link} >About</li></Link>
+          <Link href='/blog'><li className={styles.link} >Blog</li></Link>
+          <Link href='/contact'><li className={styles.link} >Contact</li></Link>
         </ul>
       </nav>
 
@@ -32,13 +33,13 @@ export default function Home() {
           A blog for hunting coders by a hunting coder
         </p>
 
-          <div className="blogs">
-            <h2>Populer Blogs</h2>
-            <div className="blogItem">
-              <h3>How to learn JavaScript in 2022?</h3>
-              <p>JavScript is the language used to design logic for the web</p>
-            </div>
+        <div className="blogs">
+          <h2>Populer Blogs</h2>
+          <div className="blogItem">
+            <h3>How to learn JavaScript in 2022?</h3>
+            <p>JavScript is the language used to design logic for the web</p>
           </div>
+        </div>
 
       </main>
 

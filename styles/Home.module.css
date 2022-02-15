@@ -130,3 +130,7 @@
   list-style: none;
   font-weight: bold;
 }
+
+.link {
+  cursor: pointer;
+}
