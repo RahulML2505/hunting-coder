@@ -3,6 +3,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 // import Script from 'next/script';
 import styles from '../styles/Home.module.css';
+// import styles1 from '../styles/Home1.module.css';
+// import styles2 from '../styles/Home2.module.css';
 
 export default function Home() {
   return (
@@ -34,6 +36,9 @@ export default function Home() {
         </p>
 
         <div className="blogs">
+          {/* <div className={styles1.con}> */}
+          {/* <div className={styles2.con}> */}
+          {/* <div className={`${styles1.con} ${styles2.con}`}> */}
           <h2>Populer Blogs</h2>
           <div className="blogItem">
             <h3>How to learn JavaScript in 2022?</h3>
