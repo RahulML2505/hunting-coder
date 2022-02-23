@@ -1,0 +1,15 @@
+.main-nav ul {
+  display: flex;
+  justify-content: center;
+  margin-top: 35px;
+}
+
+.main-nav ul li {
+  margin: 0 24px;
+  list-style: none;
+  font-weight: bold;
+}
+
+.link {
+  cursor: pointer;
+}
