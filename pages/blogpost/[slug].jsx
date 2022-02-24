@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import styles from '../../styles/BlogPost.module.css';
 
-const slug = () => {
+const Blog = () => {
     const router = useRouter();
     const { slug } = router.query;
     const [blog, setBlog] = useState(null);
@@ -39,4 +39,4 @@ const slug = () => {
     );
 };
 
-export default slug;
+export default Blog;
