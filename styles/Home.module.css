@@ -130,3 +130,8 @@
 .home-coder-img {
   border-radius: 10px;
 }
+
+.readmore {
+  color: rgb(44, 103, 231);
+  cursor: pointer;
+}

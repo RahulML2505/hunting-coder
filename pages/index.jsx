@@ -1,9 +1,39 @@
 import Head from 'next/head';
 import Image from 'next/image';
-// import Link from 'next/link';
+import Link from 'next/link';
+import React, { useEffect, useState } from 'react';
 import styles from '../styles/Home.module.css';
 
 export default function Home() {
+  const [blogs, setBlogs] = useState([]);
+
+  const renderBlogs = async () => {
+    let response = await fetch('/api/blogs/');
+    let data = await response.json();
+    let blogs = [];
+
+    let idx = 0;
+    for (const blog of data) {
+      blogs.push(
+        <div className={styles.blogItem} key={`blog_${idx++}`}>
+          <Link href={`/blogpost/${blog.slug}`}>
+            <h3 className={`${styles.link} ${styles['blogItem-h3']}`}>{blog.title}</h3>
+          </Link>
+          <p>
+            {String(blog.content).slice(0, 54)}{'...'}
+            <Link href={`/blogpost/${blog.slug}`}><span className={styles.readmore}>readmore</span></Link>
+          </p>
+        </div>
+      )
+    }
+
+    setBlogs(blogs);
+  };
+
+  useEffect(() => {
+    renderBlogs();
+  }, []);
+
   return (
     <div className={styles.container}>
       <style jsx>
@@ -41,10 +71,7 @@ export default function Home() {
 
         <div className="blogs">
           <h2>Latest Blogs</h2>
-          <div className="blogItem">
-            <h3>How to learn JavaScript in 2022?</h3>
-            <p>JavScript is the language used to design logic for the web</p>
-          </div>
+          {blogs}
         </div>
 
       </main>
