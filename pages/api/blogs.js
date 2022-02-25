@@ -3,7 +3,7 @@ const fs = require('fs/promises');
 
 export default async (req, res) => {
   let
-    dirname = 'BlogData',
+    dirname = process.env.BLOG_DATA_FOLDER,
     files_str = await fs.readdir(dirname),
     filenames = Array(files_str)[0],
     file_extension = '.json',
