@@ -20,8 +20,9 @@
   cursor: pointer;
 }
 
-.blogItem-h3 {
+.blogItem .blogItem-h {
   cursor: pointer;
+  font-size: 2rem;
 }
 
 .readmore {

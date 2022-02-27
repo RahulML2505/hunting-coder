@@ -27,8 +27,10 @@ const Blog = () => {
 
     useEffect(() => {
         // Requesting Data When `slug` appears
-        if (slug) renderBlogPost();
-    }, [slug]);
+        if (router.isReady) {
+            renderBlogPost();
+        }
+    }, [router.isReady]);
 
     return (
         <div className={styles.container}>

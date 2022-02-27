@@ -17,7 +17,7 @@ export default function Home() {
       blogs.push(
         <div className={styles.blogItem} key={`blog_${idx++}`}>
           <Link href={`/blogpost/${blog.slug}`}>
-            <h3 className={`${styles.link} ${styles['blogItem-h3']}`}>{blog.title}</h3>
+            <h3 className={`${styles.link} ${styles['blogItem-h']}`}>{blog.title}</h3>
           </Link>
           <p>
             {String(blog.content).slice(0, 54)}{'...'}
