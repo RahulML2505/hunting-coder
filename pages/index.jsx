@@ -1,11 +1,12 @@
 import Head from 'next/head';
-import Image from 'next/image';
+// import Image from 'next/image';
 import Link from 'next/link';
-import React from 'react';
+import React, { useState } from 'react';
+import fs from 'fs';
 import styles from '../styles/Home.module.css';
 
 const Home = (props) => {
-  const { blogs } = props;
+  const [blogs,] = useState(props.blogs);
   return (
     <div className={styles.container}>
       <style jsx>
@@ -34,7 +35,8 @@ const Home = (props) => {
 
         {/* <Image src="/coder.jpg" alt="" width={237} height={158} /> */}
         <div className={styles['image-wrap']}>
-          <Image src="/coder.jpg" className={styles['home-coder-img']} width={435} height={290} />
+          {/* <Image src="/coder.jpg" className={styles['home-coder-img']} width={435} height={290} /> */}
+          <img src="/coder.jpg" className={styles['home-coder-img']} width={435} height={290} />
         </div>
 
         <p className={styles.description}>
@@ -49,7 +51,7 @@ const Home = (props) => {
                 <h3 className={`${styles.link} ${styles['blogItem-h']}`}>{blog.title}</h3>
               </Link>
               <p>
-                {String(blog.content).slice(0, 54)}{'...'}
+                {String(blog.metadesc).slice(0, 54)}{'...'}
                 <Link href={`/blogpost/${blog.slug}`}><span className={styles.readmore}>readmore</span></Link>
               </p>
             </div>
@@ -58,20 +60,42 @@ const Home = (props) => {
 
       </main>
 
-      <footer className={styles.footer}>
-
-      </footer>
+      <footer className={styles.footer}></footer>
     </div>
   );
 };
 
+// const renderBlogs = async () => {
+//   let response = await fetch(`${process.env.HOST_URL}/api/blogs/`);
+//   let data = await response.json();
+//   return data;
+// };
+
 const renderBlogs = async () => {
-  let response = await fetch(`${process.env.HOST_URL}/api/blogs/`);
-  let data = await response.json();
-  return data;
+  let
+    dirname = process.env.BLOG_DATA_FOLDER,
+    files_str = await fs.promises.readdir(dirname),
+    filenames = Array(files_str)[0],
+    file_extension = '.json',
+    blogs = [];
+
+  for (const filename of filenames) {
+    if (filename.includes(file_extension)) {
+      let content = await fs.promises.readFile(`${dirname}/${filename}`, 'utf-8');
+      let data = JSON.parse(content);
+      blogs.push(
+        {
+          slug: filename.replace(file_extension, ''),
+          ...data
+        }
+      );
+    }
+  }
+  return blogs;
 };
 
-export const getServerSideProps = async (context) => {
+// export const getServerSideProps = async (context) => {
+export const getStaticProps = async (context) => {
   return {
     props: {
       blogs: await renderBlogs(),

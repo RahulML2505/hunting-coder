@@ -1,0 +1,13 @@
+.container {
+  max-width: 45vw;
+  margin: auto;
+}
+
+.mb_3 {
+  margin-bottom: 21px;
+}
+
+.form_label {
+  /* margin: 0 14px; */
+  margin-right: 14px;
+}
