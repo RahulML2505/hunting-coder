@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+
+.container {
+  margin: 40px auto;
+  display: flex;
+  flex-direction: column;
+  // justify-content: center;
+  align-items: center;
+  min-height: 90vh;
+}
+
+.input_group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 8px;
+
+  label {
+    margin: 10px 0;
+    font-weight: 500;
+  }
+
+  input,
+  textarea {
+    width: auto;
+    padding: 4px;
+    border-radius: 4px;
+    border-width: 1.6px;
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+    border-color: rgb(209, 213, 219);
+    font-size: medium;
+    font-family: 'Noto Sans', sans-serif;
+  }
+
+  textarea {
+    height: 10ch;
+    padding: 6px 5px;
+    border-radius: 6px;
+    font-family: inherit;
+  }
+}
+
+.buttons {
+  display: flex;
+  margin: 10px 0;
+  justify-content: space-around;
+}
+
+.btn {
+  padding: 3px 4px;
+  margin: 6px 2px;
+  height: 2rem;
+  width: 7rem;
+  border-style: solid;
+  border-width: .6px;
+  border-color: #4171ff;
+  border-radius: 16px;
+  background-color: #4171ff;
+  font-family: inherit;
+  color: whitesmoke;
+  font-weight: bold;
+  transition: ease-in-out;
+  transition-duration: .2s;
+}
+
+.btn:hover {
+  color: #4171ff;
+  background-color: whitesmoke;
+}
+
+@media (min-width:605px) {
+  .input_group input {
+    width: 50vw;
+  }
+}
+
+@media (min-width:680px) {
+  .input_group input {
+    max-width: 46vw;
+  }
+}
+
+@media (min-width:950px) {
+  .input_group input {
+    max-width: 35vw;
+  }
+}

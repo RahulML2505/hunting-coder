@@ -30,6 +30,40 @@
   cursor: pointer;
 }
 
+.buttons {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.readmore_button {
+  padding: 4px 6px;
+  margin: 0px;
+
+  border-style: solid;
+  border-width: 0.6px;
+  border-radius: 5px;
+  border-color: #4171ff;
+
+  background-color: #4171ff;
+  color: whitesmoke;
+
+  font-family: inherit;
+  font-weight: 600;
+
+  transition: ease-in-out;
+  transition-duration: 0.2s;
+}
+
+.readmore_button:hover {
+  background-color: whitesmoke;
+  color: #4171ff;
+}
+
+.metadesc {
+  margin: 16px 0;
+  margin-top: 3px;
+}
+
 @media (min-width: 700px) {
   .main {
     padding: 0 20vw;
