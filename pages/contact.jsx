@@ -51,12 +51,12 @@ const Contact = () => {
                 <div className={styles.input_group}>
                     <label htmlFor="email" className="form-label">Email address</label>
                     <input type="email" className="form-control" name='email' id="email" value={email} onChange={onChange} aria-describedby="email-help" required />
-                    <small id="email-help" className="form-text">We'll never share your email with anyone else.</small>
+                    <small id="email-help" className="form-text">We&apos;ll never share your email with anyone else.</small>
                 </div>
                 <div className={styles.input_group}>
                     <label htmlFor="phone" className="form-label">Phone</label>
                     <input type="tel" className="form-control" name='phone' id="phone" value={phone} onChange={onChange} aria-describedby="phone-help" required />
-                    <small id="phone-help" className="form-text">We'll never share your phone with anyone else.</small>
+                    <small id="phone-help" className="form-text">We&apos;ll never share your phone with anyone else.</small>
                 </div>
                 <div className={styles.input_group}>
                     <label htmlFor="desc">Elaborate your concern</label>
