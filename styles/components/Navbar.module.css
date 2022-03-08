@@ -10,18 +10,18 @@
   justify-items: center;
 }
 
+.main-nav ul li {
+  margin: 0 22px;
+  list-style: none;
+  font-weight: bold;
+}
+
 .main-nav ul:first-child {
   margin-left: 0;
 }
 
 .main-nav ul:last-child {
   margin-right: 0;
-}
-
-.main-nav ul li {
-  margin: 0 22px;
-  list-style: none;
-  font-weight: bold;
 }
 
 .link {
