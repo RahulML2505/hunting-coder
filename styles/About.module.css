@@ -1,9 +1,20 @@
 .container {
   margin: 48px auto;
-  max-width: 45vw;
+  padding: 0 2rem;
 }
 
 .heading {
   text-align: center;
   margin-bottom: 30px;
+}
+@media (min-width: 1080px) {
+  .container {
+    max-width: 70vw;
+  }
+}
+
+@media (min-width: 2160px) {
+  .container {
+    max-width: 45vw;
+  }
 }

@@ -28,7 +28,7 @@ const Home = (props) => {
           </span>
         </h1>
 
-        <div className="blogs">
+        <div className={styles.blogs}>
           <h2 className={styles.h2}>Latest Blogs</h2>
 
           {blogs.map((blog, idx) =>
