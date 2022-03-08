@@ -5,6 +5,7 @@
 }
 
 .main-nav ul {
+  padding: 0;
   display: flex;
   margin-top: 35px;
   justify-items: center;
