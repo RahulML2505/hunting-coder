@@ -1,3 +1,4 @@
 {
-  "workbench.colorTheme": "JellyFish"
+  "workbench.colorTheme": "JellyFish",
+  "terminal.integrated.defaultProfile.windows": "Git Bash"
 }
