@@ -20,6 +20,12 @@
   cursor: pointer;
 }
 
+.blogItem {
+  display: flex;
+  margin-bottom: 20px;
+  flex-direction: column;
+}
+
 .blogItem .blogItem-h {
   cursor: pointer;
   font-size: 2rem;
@@ -62,6 +68,11 @@
 .metadesc {
   margin: 16px 0;
   margin-top: 3px;
+}
+
+.h3 {
+  margin: 0;
+  margin-bottom: 11px;
 }
 
 @media (min-width: 700px) {

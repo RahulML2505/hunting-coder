@@ -137,6 +137,7 @@
 
 .blogItem {
   display: flex;
+  margin-bottom: 20px;
   flex-direction: column;
 }
 

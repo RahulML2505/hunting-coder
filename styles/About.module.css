@@ -1,6 +1,7 @@
 .container {
   margin: 48px auto;
   padding: 0 2rem;
+  justify-content: center;
 }
 
 .heading {
@@ -8,14 +9,23 @@
   margin-bottom: 30px;
 }
 
-@media (min-width: 1080px) {
-  .container {
-    max-width: 70vw;
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+}
+
+@media (min-width:700px) {
+  .main {
+    margin-left:  10vw;
+    margin-right:  10vw;
   }
 }
 
-@media (min-width: 2160px) {
-  .container {
-    max-width: 45vw;
+@media (min-width:1080px) {
+  .main {
+    margin-left:  20vw;
+    margin-right:  20vw;
   }
 }

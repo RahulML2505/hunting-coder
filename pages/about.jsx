@@ -1,11 +1,11 @@
 import React from 'react';
 import styles from '../styles/About.module.css';
 
-const About = () => {
-  return (
-    <div className={styles.container}>
-      <h1 className={styles.heading}>About Hunting Coder</h1>
+const About = () => (
+  <div className={styles.container}>
+    <h1 className={styles.heading}>About Hunting Coder</h1>
 
+    <main className={styles.main}>
       <div>
         <h2>Introduction</h2>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore id architecto eos odit saepe dicta unde, rerum eligendi totam quibusdam fuga adipisci iusto doloremque? Quo ipsum aliquid incidunt! Atque voluptatem doloribus iste soluta dolorum commodi illum vel consequatur maiores distinctio! Omnis illum, tempora placeat necessitatibus quas pariatur magni veniam rerum maiores. Obcaecati laborum porro eaque commodi tenetur, facilis, vitae a accusantium mollitia nemo optio iste dignissimos maiores laboriosam placeat natus consequatur reiciendis cupiditate. Laboriosam provident nulla ut non sunt dicta, autem itaque pariatur quasi, qui beatae, omnis alias magnam commodi nostrum? Unde sunt delectus vitae ad enim, necessitatibus veniam cupiditate?</p>
@@ -28,9 +28,9 @@ const About = () => {
         <h2>Contact us</h2>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore optio quae corporis, fugit, obcaecati vel quas repellendus hic et exercitationem assumenda deleniti nam velit, accusamus sint autem ipsum architecto maxime nisi voluptatem. Velit doloribus totam deserunt culpa ea, veritatis officia, quasi, consectetur obcaecati magnam assumenda eligendi praesentium quod? Accusantium, voluptate quo. Nam iure consequatur in provident!</p>
       </div>
+    </main>
 
-    </div>
-  )
-};
+  </div>
+);
 
 export default About;

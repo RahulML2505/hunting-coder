@@ -1,5 +1,5 @@
 .container {
-  padding: 0 18vw;
+  padding: 0 2rem;
 }
 
 .main {
@@ -13,4 +13,10 @@
   /* Customized */
   justify-content: flex-start;
   margin-top: 3rem;
+}
+
+@media (min-width: 700px) {
+  .container {
+    padding: 0 20vw;
+  }
 }
