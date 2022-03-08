@@ -132,7 +132,7 @@
 }
 
 .blogs {
-  padding: 3vh 0;
+  margin: 3vh 0;
 }
 
 .blogItem {
@@ -197,11 +197,18 @@
   }
 
   .blogs {
-    padding: inherit 10vw;
+    padding-left: 6vw;
+    padding-right: 6vw;
   }
 }
 
-@media (min-width: 1080px) {
+@media (min-width: 1800px) {
+  .blogs {
+    max-width: 67vw;
+  }
+}
+
+@media (min-width: 2160px) {
   .blogs {
     max-width: 60vw;
   }
