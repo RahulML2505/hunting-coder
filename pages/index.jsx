@@ -65,9 +65,10 @@ const renderBlogs = async () => {
 };
 
 export const getServerSideProps = async (context) => {
+  const { blogs } = await renderBlogs();
   return {
     props: {
-      blogs: await renderBlogs(),
+      blogs,
     },
   }
 };

@@ -6,9 +6,16 @@ export default async (req, res) => {
     dirname = process.env.BLOG_DATA_FOLDER,
     files_str = await fs.readdir(dirname),
     filenames = Array(files_str)[0],
+    total_blogs = filenames.length,
     file_extension = '.json',
+    blogs_count = 3,
     blogs = [];
 
+  if (req.query.count) {
+    blogs_count = parseInt(req.query.count);
+  }
+
+  filenames = filenames.slice(0, blogs_count);
   /***
    * ```|_ Do not use forEach with async-await _|```
    * Fortunately if your language has async-await then it will also have the `for...of` construction, so you can use that */
@@ -25,5 +32,5 @@ export default async (req, res) => {
     }
   }
 
-  res.status(200).json(blogs);
+  res.status(200).json({ blogs, total_blogs });
 };

@@ -75,6 +75,11 @@
   margin-bottom: 11px;
 }
 
+.blogs_end_message {
+  display: flex;
+  justify-content: center;
+}
+
 @media (min-width: 700px) {
   .main {
     padding: 0 20vw;
