@@ -5,6 +5,9 @@
 /.pnp
 .pnp.js
 
+# My Personalization
+/data/contacts
+
 # testing
 /coverage
 

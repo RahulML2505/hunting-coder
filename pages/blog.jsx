@@ -36,7 +36,7 @@ const Blog = (props) => {
             loader={<h4>Loading...</h4>}
             endMessage={
               <div className={styles.blogs_end_message}>
-                <small>Yeh you exceded all blogs!</small>
+                <small>Yeh you exceed all blogs!</small>
               </div>
             }
           >

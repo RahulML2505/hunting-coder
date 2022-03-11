@@ -28,3 +28,9 @@
 .link {
   cursor: pointer;
 }
+
+@media (max-width: 450px) {
+  .main-nav ul li {
+    margin: 0 15px;
+  }
+}
