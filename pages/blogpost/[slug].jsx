@@ -15,7 +15,7 @@ const Slug = (props) => {
             <main className={styles.main}>
                 <h1>{blog?.title}</h1>
                 <hr />
-                {blog && <div dangerouslySetInnerHTML={createMarkup(blog.content)}></div>}
+                {blog && <div dangerouslySetInnerHTML={createMarkup(blog.content)} className={styles.blog_text}></div>}
             </main>
         </div>
     );

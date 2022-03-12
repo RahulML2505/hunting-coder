@@ -16,6 +16,10 @@
   margin-top: 3rem;
 }
 
+.blog_text {
+  text-align: justify;
+}
+
 @media (min-width: 700px) {
   .container {
     padding: 0 20vw;
